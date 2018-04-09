@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Made with Thimble</title>
+    <link rel="stylesheet" href="style.css">
+  </head>
+  <body>
+    <h1><center>Class Discussion Board</center></h1>
+    <p><center>
+      Post your questions and help out your classmates!
+      </center></p>
+  </body>
+
+  <body> 
+    <p>Select your name:</p>
+  <div class="dropdown">
+    <button onclick="myFunction()" class="dropbtn">Dropdown</button>
+    <div id="myDropdown" class="dropdown-content">
+      <a href="#home">Katie Define</a> 
+      <a href="#home">Thomas Castleman</a>
+      <a href="#home">Jackson Mullins</a>
+      <a href="#home">Emmett Barger</a>
+      <a href="#home">Rafe Forward</a>
+<!-- names here -->
+    </div>
+  </div>
+  <script>
+/*button clicked = toggle dropdown*/
+    function myFunction() {
+      document.getElementById("myDropdown").classList.toggle("show");
+    }   
+//close the dropdown if user clicks outside
+    window.onclick = function(event) {
+      if (!event.target.matches('.dropbtn')) {
+        var dropdowns = document.getElementsByClassName("dropdown-content");
+        var i;
+        for (i = 0; i < dropdowns.length; i++) {
+          var openDropdown = dropdowns[i];
+          if (openDropdown.classList.contains('show')) {
+            openDropdown.classList.remove('show');
+          }
+        }
+      }
+    }  
+  </script>
+  </body>
+  <body>
+    <p>Type your message:</p>
+    <textarea rows="4" cols="79"> 
+    </textarea>
+  </body>
+</html>
+<!-- size & position everything like a text message, create a submit button and an area for messages -scrolling?-, cool colors/design -->
